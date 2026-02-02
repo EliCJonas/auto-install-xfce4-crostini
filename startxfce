@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# Kill stale Xephyr sessions
+pkill -f "Xephyr" 2>/dev/null
+rm -f /tmp/.X2-lock
+rm -f /tmp/.X11-unix/X2
+
+# Launch Xephyr
+Xephyr :2 -ac -br -noreset -screen 1280x800 &
+
+# Give Xephyr time to initialize
+sleep 0.5
+
+# Start XFCE inside Xephyr
+DISPLAY=:2 xfce4-session &
