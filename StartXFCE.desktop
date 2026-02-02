@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=Start XFCE Desktop
+Comment=Launch XFCE inside Xephyr
+Exec=startxfce
+Terminal=false
+Categories=System;Utility;
+NoDisplay=false
+Icon=system-run
