@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=XFCE Settings
+Comment=Open the XFCE Settings Manager
+Exec=xfce4-settings-manager
+Terminal=false
+Categories=Settings;System;
+NoDisplay=false
+Icon=preferences-system
