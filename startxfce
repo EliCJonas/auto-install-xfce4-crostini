@@ -11,5 +11,11 @@ Xephyr :2 -ac -br -noreset -screen 1280x800 &
 # Give Xephyr time to initialize
 sleep 0.5
 
+# Force X11 for everything inside XFCE
+export DISPLAY=:2
+export GDK_BACKEND=x11
+export QT_QPA_PLATFORM=xcb
+unset WAYLAND_DISPLAY
+
 # Start XFCE inside Xephyr
-DISPLAY=:2 xfce4-session &
+xfce4-session &
