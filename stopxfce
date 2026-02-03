@@ -1,17 +1,17 @@
 #!/bin/bash
 
-# Kill XFCE session components
-pkill -f xfce4-session
-pkill -f xfwm4
-pkill -f xfsettingsd
-pkill -f xfce4-panel
-pkill -f xfdesktop
-pkill -f Thunar
+# Kill ONLY the XFCE session inside Xephyr
+pkill -x xfce4-session
+pkill -x xfwm4
+pkill -x xfsettingsd
+pkill -x xfce4-panel
+pkill -x xfdesktop
+pkill -x Thunar
 
-# Kill Xephyr (all variants)
-pkill -f "Xephyr"
+# Kill ONLY Xephyr (avoid matching sommelier)
+pkill -x Xephyr
 
-# Remove stale locks
+# Clean up stale locks for DISPLAY :2
 rm -f /tmp/.X2-lock
 rm -f /tmp/.X11-unix/X2
 
