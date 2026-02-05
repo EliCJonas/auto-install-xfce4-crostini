@@ -21,15 +21,6 @@ sudo apt install -y xserver-xephyr xfce4 xfce4-goodies
 echo "Installation complete."
 echo "Testing Xephyr display..."
 
-Xephyr :2 -resizeable &
-XEPHYR_PID=$!
-sleep 2
-
-if ! kill -0 "$XEPHYR_PID" 2>/dev/null; then
-    echo "Warning: Xephyr failed to start. You may need to reboot Linux by right-clicking the Terminal icon and selecting 'Shut Down Linux'." >&2
-else
-    kill "$XEPHYR_PID" 2>/dev/null || true
-fi
 
 # Install task-xfce-desktop to pull in additional Xfce4 dependencies, then immediately
 # purge it. The meta-package configures XFCE to autostart on container startup, and if
