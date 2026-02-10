@@ -31,6 +31,7 @@ sudo apt install -y task-xfce-desktop
 echo "Purging meta-package to prevent autostart issues..."
 sudo apt purge -y task-xfce-desktop
 sudo apt purge -y libreoffice*
+sudo apr purge lightdm
 
 # Create applications directory if it doesn't exist
 mkdir -p ~/.local/share/applications
