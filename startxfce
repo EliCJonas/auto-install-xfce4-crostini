@@ -1,21 +1,22 @@
 #!/bin/bash
 
+# Prevent ChromeOS from forcing Wayland
+unset WAYLAND_DISPLAY
+unset XDG_SESSION_TYPE
+
 # Kill stale Xephyr sessions
-pkill -f "Xephyr" 2>/dev/null
+pkill -x Xephyr 2>/dev/null
 rm -f /tmp/.X2-lock
 rm -f /tmp/.X11-unix/X2
 
 # Launch Xephyr
-Xephyr :2 -ac -br -noreset -screen 1280x800 &
+Xephyr :2 -ac -br -noreset -fullscreen -resizeable &
 
-# Give Xephyr time to initialize
 sleep 0.5
 
 # Force X11 for everything inside XFCE
 export DISPLAY=:2
 export GDK_BACKEND=x11
 export QT_QPA_PLATFORM=xcb
-unset WAYLAND_DISPLAY
 
-# Start XFCE inside Xephyr
 xfce4-session &
