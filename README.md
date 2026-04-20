@@ -1,5 +1,7 @@
 # Auto Install Xfce4 for ChromeOS (Crostini)
 
+[![2/6 AI-Assisted | Vibescale](https://vibescale.github.io/badge-bar/2.svg)](https://vibescale.github.io/#2)
+
 A simple installer to set up the Xfce4 desktop environment on ChromeOS using Xephyr, a nested X server that runs inside the Linux container.
 
 ## Requirements
