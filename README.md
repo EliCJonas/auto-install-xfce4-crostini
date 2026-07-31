@@ -1,7 +1,6 @@
 # <p align="center">Auto Install Xfce4 for ChromeOS (Crostini)</p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Available_for-Auro-4c1" alt="Available for Auro" />
   <a href="https://vibescale.github.io/#2">
     <img src="https://vibescale.github.io/badge-bar/2.svg" alt="2/6 Artisanal | Vibescale" />
   </a>
